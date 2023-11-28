@@ -1,10 +1,8 @@
 export const changeState = (prop) => {
-    return (value) => {
-        return (state) => ({
-            ...state,
-            [prop]: (state[prop] || 0) + value
-        });
-    };
+    return (state) => ({
+        ...state,
+        [prop]: (state[prop] || 0) + Math.floor(Math.random() * 6)
+    });
 };
 export const storeState = () => {
     const plantStates = {};
@@ -52,7 +50,9 @@ export const actionCheck = (num) => {
         return true;
     }
 };
+
 export const stateControl = storeState();
-export const blueFood = changeState("food")(5);
-export const hydrate = changeState("water")(1);
-export const giveLight = changeState("light")(3);
+export const blueFood = changeState("food");
+export const hydrate = changeState("water");
+export const giveLight = changeState("light");
+
