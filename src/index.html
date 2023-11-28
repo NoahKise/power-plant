@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type="text/javascript" src="plant.js"></script>
-    <title>Grow Your Plant</title>
-  </head>
-  <body>
+
+<head>
+  <script type="text/javascript" src="plant.js"></script>
+  <title>Grow Your Plant</title>
+</head>
+
+<body>
+  <div class="container">
     <div id="plant1">
-    <button id="feed1">Add soil</button>
-    <button id="water1">Add water</button>
-    <button id="light1">Add light</button>
-    <button id="show-state1">Current Stats</button>
-    <h1>Your Plant's Values</h1>
-    <h3><div id="soil-value1">0</div></h3>
-    <h3><div id="water-value1">0</div></h3>
-    <h3><div id="light-value1">0</div></h3>
-  </div>
+      <h1>Your Plant's Values</h1>
+      <div class="row">
+        <button id="feed1" class="col-md-4">Add soil</button>
+        <button id="water1" class="col-md-4">Add water</button>
+        <button id="light1" class="col-md-4">Add light</button>
+      </div>
+      <div class="row">
+        <h3 class="col-md-4">
+          <div id="soil-value1">0</div>
+        </h3>
+        <h3 class="col-md-4">
+          <div id="water-value1">0</div>
+        </h3>
+        <h3 class="col-md-4">
+          <div id="light-value1">0</div>
+        </h3>
+      </div>
+      <button id="show-state1">Current Stats</button>
+    </div>
+    <br>
     <div id="plant2">
       <button id="feed2">Add soil</button>
       <button id="water2">Add water</button>
       <button id="light2">Add light</button>
       <button id="show-state2">Current Stats</button>
       <h1>Your Plant's Values</h1>
-      <h3><div id="soil-value2">0</div></h3>
-      <h3><div id="water-value2">0</div></h3>
-      <h3><div id="light-value2">0</div></h3>
+      <h3>
+        <div id="soil-value2">0</div>
+      </h3>
+      <h3>
+        <div id="water-value2">0</div>
+      </h3>
+      <h3>
+        <div id="light-value2">0</div>
+      </h3>
     </div>
-  </body>
+    <form id="pickPlant">
+      <select name="plantTypes" id="plantTypes">
+        <option value="seymour">Seymour</option>
+        <option value="orchid">Orchid</option>
+        <option value="venus-fly-trap">Venus Fly Trap</option>
+        <option value="cactus">Cactus</option>
+        <option value="sunflower">Sunflower</option>
+        <option value="giving-tree">Giving Tree</option>
+        <option value="jade">Jade</option>
+        <option value="radish">Radish</option>
+      </select>
+      <button id="newPlant">Plant a Seed</button>
+    </form>
+  </div>
+</body>
+
 </html>
