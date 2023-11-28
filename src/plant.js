@@ -55,4 +55,3 @@ export const stateControl = storeState();
 export const blueFood = changeState("food");
 export const hydrate = changeState("water");
 export const giveLight = changeState("light");
-
